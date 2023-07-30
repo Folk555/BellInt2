@@ -32,7 +32,7 @@ public class testDebug {
             .build()
             .param("access_key", token);
 
-    //@Test
+    @Test
     void main() {
         ValidatableResponse response = given().spec(specification)
                 .when()

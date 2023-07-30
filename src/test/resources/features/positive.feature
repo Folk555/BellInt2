@@ -1,5 +1,5 @@
-@SomeTest
-Feature: Демо
+@PositiveTests
+Feature: Позитивные тесты
 
   Scenario Outline: Запрос информации по городам
     When посылаем get запрос, в котором указываем "<city>"

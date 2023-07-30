@@ -2,15 +2,11 @@ package utils;
 
 import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.builder.RequestSpecBuilder;
-import io.restassured.filter.log.RequestLoggingFilter;
-import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 
-import java.util.List;
-
 public class WhetherConstants {
-    public static final String token = "3b63c1405e3a96a7b9a313d5dee34cc8";
+    public static final String token = "6c4a25f7e55b2179ec97cf243d5080f8";
     public static final String whetherURI = "http://api.weatherstack.com/current";
 
     public static final RequestSpecification specification = new RequestSpecBuilder()

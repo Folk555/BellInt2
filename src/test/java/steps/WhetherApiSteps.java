@@ -1,7 +1,6 @@
 package steps;
 
 import io.cucumber.java.After;
-import io.cucumber.java.AfterAll;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -20,7 +19,7 @@ public class WhetherApiSteps {
 
     @When("посылаем get запрос, в котором указываем {string}")
     public void посылаемGetЗапросВКоторомУказываемCity(String city) {
-        //if (!city.equals("Saint Petersburg")) return; //временно чтобы не проходить все кейсы
+        //if (!city.equals("Saint Petersburg")) return; //временно, чтобы не проходить все кейсы
 
         currentResponse = given().spec(specification)
                 .when()
@@ -63,7 +62,7 @@ public class WhetherApiSteps {
     @And("скорость ветра соответствует случайно генерируемому числу")
     public void скоростьВетраСоответствуетСлучайноГенерируемомуЧислу() {
         int actualWindSpeed = currentResponse.extract().jsonPath().getInt("current.wind_speed");
-        int randomWindSpeed = (int) (Math.random() * 15 + 15);
+        int randomWindSpeed = (int) (Math.random() * 7 + 12);
 
         if (actualWindSpeed != randomWindSpeed) {
             String errorDescription = "Значение поля current.wind_speed {"+actualWindSpeed+"} в теле ответа " +
